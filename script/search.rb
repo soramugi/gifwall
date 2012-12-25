@@ -29,7 +29,12 @@ def gifboom_url(tweet)
 end
 
 def twitter_search
-  pit = Pit.get('twitter')
+  pit = Pit.get('gifwall', :require => {
+    :consumer_key    => 'consumer_key',
+    :consumer_secret => 'consumer_secret',
+    :token           => 'token',
+    :secret          => 'secret',
+  })
   Twitter.configure do |c|
     c.consumer_key       = pit[:consumer_key]
     c.consumer_secret    = pit[:consumer_secret]
