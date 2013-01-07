@@ -1,3 +1,4 @@
 - @puts.each do |put|
-  %a{:href => put[:link]}
-    %img.img-polaroid.img-rounded.img-height{:src => put[:gif]}
+  %span.img.img-polaroid.img-rounded
+    %a{:href => put[:link]}
+      %img{:src => put[:gif]}

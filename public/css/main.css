@@ -1,4 +1,21 @@
+.well {
+  overflow:hidden;
+}
 
-.img-height {
-  height:300px
+.img {
+  float:left;
+  margin:.5em 0;
+  margin-right:10px;
+}
+
+.img a {
+  float:left;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+}
+
+.img a img {
+  min-width:200px;
+  min-height:200px;
 }
