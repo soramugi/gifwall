@@ -35,7 +35,9 @@ class Gifwall
   def gif_url(url)
     response = open url
     doc = Nokogiri::HTML.parse response.read
-    gif = doc.css('.gif-box figure img').first.attribute('src').value
+    img = doc.css('.gif-box figure img').first
+    return if img == nil
+    gif = img.attribute('src').value
     gif.scan(/.+\.gif/).first if gif != nil
   end
 
